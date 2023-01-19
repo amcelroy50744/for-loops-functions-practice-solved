@@ -7,8 +7,17 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-
+let doesArrayInclude = []
+for (let index = 0; index < array.length; index++) {
+if (array[index].toLowerCase() === value.toLowerCase()){
+  doesArrayInclude.push(array[index])
 }
+}
+if(doesArrayInclude.length > 0){
+  return true;
+}else return false;
+}
+
 
 
 

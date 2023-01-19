@@ -7,7 +7,18 @@
 
 export function joinToString(array, separator) {
   // Your code goes here...
-
+let arraytoSplice = [];
+let joinToString = '';
+for(let index = 0; index < array.length; index++){
+  arraytoSplice.push(array[index])
+}
+for(let index = 1; index < arraytoSplice.length -1; index+=2){
+  arraytoSplice.splice(index,0,separator)
+}
+for(let x of arraytoSplice){
+  joinToString += x
+}
+return joinToString
 }
 
 

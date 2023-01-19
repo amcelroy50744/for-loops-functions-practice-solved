@@ -5,7 +5,15 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+let getAllWithdrawals = [];
+for (let index = 0; index < array.length; index++) {
+  let totalAddTogether = 0;
+  for (let withdrawals in array[index].withdrawals) {
+    totalAddTogether += array[index].withdrawals[withdrawals]
+  }
+  getAllWithdrawals.push(totalAddTogether);
+}
+return getAllWithdrawals;
 }
 
 // === TEST YOURSELF ===
